@@ -1,3 +1,5 @@
+#fibonacci series
+
 no = int(input("Enter the number till you want the series:"))
 a = 0
 b = 1
