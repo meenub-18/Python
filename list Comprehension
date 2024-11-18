@@ -1,0 +1,63 @@
+#List Comprehension Methods
+
+Example 1) #Adding two no.s in marks
+marks =  [90,96,97,98,99]
+new_marks = []
+for x in marks:
+    new_marks.append(x+2)
+# print(new_marks)
+
+#Using List comprehension
+marks =  [90,96,97,98,99]
+new_marks = [x+2 for x in marks]  #Tip: adding x=2 for x. Where?, In  x
+# print(new_marks)
+
+Example 2) #To find the cube of even numbers
+cubes = []
+for x in range(10):
+    if x % 2 == 0:
+        cubes.append(x**3)
+# print("using for loop:", cubes)
+
+# By using list comprehension.
+new_cubes = [x**3 for x in range(10)if x % 2 == 0]
+print("Using list comprehension",new_cubes)
+
+
+
+Example 3) #Creating a list of 50 no's divisible by 2
+list = []
+for a in range(1,51):  
+    if a % 2 == 0:
+      list.append(a)
+print(list)
+
+#Using List comprehension
+l = [a for a in range(1,51) if a%2==0]   #Print the  values that are divisible by two.(even no's)
+print(l)
+
+Example 3) #Converting string into list using list comprehension (string element storing in list)
+new = "marvelous"
+list = [a for a in new]
+print(list)  
+
+Example 4) #print the list divisible by 3 
+list = [] 
+for a in range(1,101):
+    if a%3==0:
+        list.append(a)    
+print(list)
+
+#using list comprehension
+l = [a for a in range(1,101) if a%3==0]   #(range = n-1)
+print(l)
+
+#Dictionary Comprehension Methods
+
+Example 1) Creating dictionary with items 1 to 100
+dict1 = {i :f"item {i}" for i in range(1, 101)}
+print(dict1)
+
+Example 2) Creating Dictionary with items 1 to 100 with condition (nos divisible by 10)
+dict2 = {i :f"item {i}" for i in range(1, 101) if i%10==0}
+print(dict2)
